@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+// eslint-disable-next-line
 import anime from 'animejs'
 import gsap from 'gsap'
 import { TweenMax } from 'gsap/gsap-core'
@@ -40,30 +41,6 @@ const Header = () => {
             delay: (el, i) => 4800 + 50 * i
         })
 
-        // Loader
-        TweenMax.to(".load_wrapper", 2, {
-            top: "-100%",
-            ease: "expo.easeInOut",
-            delay: 3.6,
-        })
-
-        let tl = new TimelineMax()
-
-        tl.from(".loader", 1.6, {
-            scaleY: "0%",
-            y: 80,
-            ease: "expo.easeInOut",
-            delay: 1,
-            transformOrigin:"50% 100%"
-        })
-
-        tl.to(".loader", 1.6, {
-            height: "20vh",
-            scaleY: "0%",
-            ease: "expo.easeInOut",
-            transformOrigin:"0% -100%"    
-        })
-
         TweenMax.to(".box", 2.4, {
             y: "-100%",
             ease: "expo.easeInOut",
@@ -90,11 +67,6 @@ const Header = () => {
 
     return (
         <>
-            
-            <div className="load_wrapper">
-                <div className="loader"></div>
-            </div>
-            
             <header>
                 <div className="container">
                     <nav className="menu">

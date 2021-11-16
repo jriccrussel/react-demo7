@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
+// eslint-disable-next-line
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import imagesLoaded from 'imagesloaded'
 
 const url = "https://source.unsplash.com/random/1240x874?sig="
 
-const random = Math.floor(Math.random() * 206)
+// const random = Math.floor(Math.random() * 206)
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -45,7 +46,8 @@ const Content = () => {
 
     return (
         <>
-            <section className="text_container">
+            <main>
+                <section className="text_container">
                     <div className="wrapper text">
                         ABCDEFGHIJKLMNOPQRSTUVWXYZ
                     </div>
@@ -145,6 +147,7 @@ const Content = () => {
                     <p>Design is not just what it looks like and feels like. <br/>Design is how it works</p>
                     {/* <p>Images from <a href="https://unsplash.com/">Unsplash</a></p> */}
                 </footer>
+            </main>
         </>
     )
 }
