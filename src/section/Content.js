@@ -45,8 +45,7 @@ const Content = () => {
 
     return (
         <>
-            <main>
-                <section className="text_container">
+            <section className="text_container">
                     <div className="wrapper text">
                         ABCDEFGHIJKLMNOPQRSTUVWXYZ
                     </div>
@@ -135,7 +134,6 @@ const Content = () => {
                         </ul>
                     </div>
                 </section>
-
                 
                 <section className="text_container">
                     <div className="wrapper text">
@@ -144,9 +142,9 @@ const Content = () => {
                 </section>
 
                 <footer>
-                    <p>Images from <a href="https://unsplash.com/">Unsplash</a></p>
+                    <p>Design is not just what it looks like and feels like. <br/>Design is how it works</p>
+                    {/* <p>Images from <a href="https://unsplash.com/">Unsplash</a></p> */}
                 </footer>
-            </main>
         </>
     )
 }

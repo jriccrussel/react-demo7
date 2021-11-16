@@ -5,8 +5,10 @@ import Content from './section/Content'
 function App() {
   return (
     <>
-      <Header />
-      <Content />
+      <main>
+        <Header />
+        <Content />
+      </main>
     </>
   )
 }

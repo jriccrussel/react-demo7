@@ -12,9 +12,12 @@
   box-sizing: border-box;
 }
 
-body{
-    overflow-x:hidden;
-    overflow-y: visible;
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    // overflow-x:hidden;
+    // overflow-y: visible;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
@@ -22,12 +25,203 @@ main{
     overflow: hidden;
 }
 
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+.load_wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 2;
+
+    .loader{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8%;
+        height: 20vh;
+        background: #fff;
+        z-index: 2;
+    }
+}
+
+.container{
+    position: relative;
+    .menu{
+        width: 80%;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+
+        .menu-item{
+            flex: 1;
+            font-family: "Monument Extended";
+        }
+
+        .menu-left{
+            text-align: left;
+
+            .menu-link{
+                padding: 0 30px;
+            }
+        }
+
+        .menu-center{
+            text-align: center;
+
+            .brand-logo{
+
+            }
+        }
+
+        .menu-right{
+            text-align: right;
+
+            .search-icon{
+
+            }
+        }
+    } // end menu
+
+    .wrapper-img{
+        overflow: hidden;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 30%;
+        height: 90vh;
+
+        @media (max-width: 900px){
+            width: 90%;
+        }
+
+        .box{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 1;
+            background: #fff;
+        }
+
+        div{
+            img{
+                // width: 100%;
+                // height: 100%;
+                // object-fit: cover;
+            }
+        }
+    } // end wrapper-img
+
+    .header{
+        position: absolute;
+        top: 60%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+
+        @media (max-width: 900px){
+            top: 50%;
+            left: 50%;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 90px;
+            font-family: "Monument Extended";
+            text-transform: uppercase;
+            margin: 0;
+            mix-blend-mode: overlay;
+
+            @media (max-width: 900px) {
+                font-size: 40px;
+            }
+        }
+
+        .header-1 .letter, .header-2 .letter{
+            display: inline-block;
+            line-height: 1em;
+        }
+
+        .header-2{
+
+        }
+    } // end header
+
+    .hero-container{
+        .sidebar-text{
+            position: absolute;
+            top: 20%;
+            right: 7%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-family: "Monument Extended";
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(165, 165, 165);
+        }
+
+        .project{
+            position: absolute;
+            font-family: "Monument Extended";
+            bottom: 10%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            text-decoration: underline;
+
+            @media (max-width: 900px){
+                display: none;
+            }
+        }
+
+        .img-nav{
+            position: absolute;
+            right: 13%;
+            bottom: 13%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            color: grey;
+
+            @media (max-width: 900px){
+                display: none;
+            }
+
+            .prev{
+
+            }
+
+            .next{
+                position: relative;
+                top: 40px;
+                left: 80px;
+            }
+        }
+    } // end hero-container
+}
+
+
 .text_container{
+    &:first-of-type{
+        margin-top: 80px;
+    }
     .wrapper{
         display: flex;
         font-size: clamp(8rem, 15vw, 16rem);
         line-height: 1;
         font-weight: 900;
+        font-family: "Monument Extended";
+        letter-spacing: 12px;
     }
 }
 
@@ -58,11 +252,18 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
-    font-size: 20px;
+    height: 60vh;
     font-weight: 600;
 
     a{
         color: #4e9815;
+    }
+
+    p{
+        font-size: 34px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 1.7;
+        font-family: "Monument Extended";
     }
 }
